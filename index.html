@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte Nexus – Boutique TCG & cartes à collectionner</title>
+  <meta name="description" content="Boutique indépendante de cartes à collectionner : Pokémon, One Piece, Yu-Gi-Oh!, Magic, Lorcana, Dragon Ball. Boosters, displays, coffrets, cartes à l'unité et accessoires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barre d'annonce -->
+  <div class="announce">
+    <div class="announce-track">
+      <span>🚚 Livraison offerte en France dès 200 €</span>
+      <span>📦 Expédition sous 24–48 h ouvrées</span>
+      <span>🏪 Retrait gratuit en boutique</span>
+      <span>🇯🇵 Imports JPN, CN &amp; KR – stock limité</span>
+    </div>
+  </div>
+
+  <!-- En-tête -->
+  <header class="header">
+    <div class="container header-inner">
+      <button class="icon-btn burger" id="burger" aria-label="Menu">☰</button>
+      <a href="#" class="logo">
+        <span class="logo-mark"></span>
+        <span class="logo-text">Carte<b>Nexus</b></span>
+      </a>
+      <form class="search" id="searchForm" role="search">
+        <input type="search" id="searchInput" placeholder="Rechercher un booster, un display, une carte…">
+        <button type="submit" aria-label="Rechercher">🔍</button>
+      </form>
+      <div class="header-actions">
+        <a href="#" class="icon-btn" aria-label="Mon compte">👤</a>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Panier">
+          🛒<span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <div class="container">
+        <ul>
+          <li><a href="#produits" data-filter="all">Nouveautés</a></li>
+          <li><a href="#produits" data-filter="pokemon">Pokémon</a></li>
+          <li><a href="#produits" data-filter="onepiece">One Piece</a></li>
+          <li><a href="#produits" data-filter="yugioh">Yu-Gi-Oh!</a></li>
+          <li><a href="#produits" data-filter="magic">Magic</a></li>
+          <li><a href="#produits" data-filter="lorcana">Lorcana</a></li>
+          <li><a href="#produits" data-filter="dragonball">Dragon Ball</a></li>
+          <li><a href="#produits" data-filter="japon">Import Japon</a></li>
+          <li><a href="#produits" data-filter="accessoires">Accessoires</a></li>
+          <li><a href="#produits" data-filter="promo" class="nav-promo">Promos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="badge">Nouvelle extension disponible</span>
+          <h1>La boutique des collectionneurs de <span class="grad">cartes TCG</span></h1>
+          <p>Boosters, displays, coffrets, cartes à l'unité et imports japonais. Des produits officiels, bien protégés et expédiés rapidement.</p>
+          <div class="hero-cta">
+            <a href="#produits" class="btn btn-primary">Découvrir les nouveautés</a>
+            <a href="#categories" class="btn btn-ghost">Toutes les catégories</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="card-stack">
+            <div class="tcg-card c1"></div>
+            <div class="tcg-card c2"></div>
+            <div class="tcg-card c3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Réassurance -->
+    <section class="trust">
+      <div class="container trust-grid">
+        <div class="trust-item"><span>✅</span><div><b>Produits 100 % officiels</b><small>Éditeurs autorisés uniquement</small></div></div>
+        <div class="trust-item"><span>🛡️</span><div><b>Emballage soigné</b><small>Chaque carte protégée</small></div></div>
+        <div class="trust-item"><span>🚀</span><div><b>Expédition rapide</b><small>Point relais dès 3,49 €</small></div></div>
+        <div class="trust-item"><span>🔒</span><div><b>Paiement sécurisé</b><small>CB, PayPal, Apple Pay</small></div></div>
+      </div>
+    </section>
+
+    <!-- Catégories -->
+    <section class="section" id="categories">
+      <div class="container">
+        <h2 class="section-title">Nos univers</h2>
+        <div class="cat-grid">
+          <a href="#produits" class="cat" data-filter="pokemon" style="--c1:#ffcb05;--c2:#e3350d">Pokémon</a>
+          <a href="#produits" class="cat" data-filter="onepiece" style="--c1:#d62828;--c2:#1d3557">One Piece</a>
+          <a href="#produits" class="cat" data-filter="yugioh" style="--c1:#7b2cbf;--c2:#240046">Yu-Gi-Oh!</a>
+          <a href="#produits" class="cat" data-filter="magic" style="--c1:#f77f00;--c2:#3a0ca3">Magic</a>
+          <a href="#produits" class="cat" data-filter="lorcana" style="--c1:#4cc9f0;--c2:#3f37c9">Lorcana</a>
+          <a href="#produits" class="cat" data-filter="dragonball" style="--c1:#ff9f1c;--c2:#e71d36">Dragon Ball</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produits -->
+    <section class="section section-alt" id="produits">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="productsTitle">Nouveautés</h2>
+          <div class="toolbar">
+            <select id="sortSelect" aria-label="Trier">
+              <option value="default">Trier : pertinence</option>
+              <option value="price-asc">Prix croissant</option>
+              <option value="price-desc">Prix décroissant</option>
+              <option value="name">Nom A → Z</option>
+            </select>
+          </div>
+        </div>
+        <div class="chips" id="chips"></div>
+        <div class="product-grid" id="productGrid"></div>
+        <p class="empty" id="emptyMsg" hidden>Aucun produit ne correspond à votre recherche.</p>
+      </div>
+    </section>
+
+    <!-- Bandeau promo -->
+    <section class="promo-banner">
+      <div class="container promo-inner">
+        <div>
+          <h2>Précommandes ouvertes</h2>
+          <p>Réservez les prochaines sorties au prix de lancement, avant la rupture.</p>
+        </div>
+        <a href="#produits" class="btn btn-light" data-filter="precommande">Voir les précommandes</a>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section class="section" id="apropos">
+      <div class="container about">
+        <div>
+          <h2 class="section-title">Une boutique tenue par des passionnés</h2>
+          <p>Carte Nexus est une boutique indépendante de cartes à collectionner. Joueurs ou collectionneurs, vous trouverez chez nous une sélection renouvelée chaque semaine : boosters, displays, ETB, coffrets, cartes à l'unité et accessoires de protection.</p>
+          <p>Chaque commande est préparée à la main et emballée avec soin pour arriver en parfait état.</p>
+          <ul class="stats">
+            <li><b>+15 000</b><span>commandes expédiées</span></li>
+            <li><b>4,9/5</b><span>avis clients</span></li>
+            <li><b>24–48 h</b><span>préparation</span></li>
+          </ul>
+        </div>
+        <div class="reviews">
+          <blockquote>« Colis ultra bien protégé et reçu en 2 jours. Je recommande ! »<cite>— Julien, client vérifié</cite></blockquote>
+          <blockquote>« Super choix d'imports japonais et un service client réactif. »<cite>— Sarah, cliente vérifiée</cite></blockquote>
+          <blockquote>« Prix corrects et précommandes toujours honorées. »<cite>— Mehdi, client vérifié</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container nl-inner">
+        <div>
+          <h2>Ne ratez plus aucune sortie</h2>
+          <p>Nouveautés, réassorts et précommandes directement dans votre boîte mail.</p>
+        </div>
+        <form id="nlForm" class="nl-form">
+          <input type="email" required placeholder="Votre adresse e-mail">
+          <button class="btn btn-primary" type="submit">S'inscrire</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="logo logo-footer"><span class="logo-mark"></span><span class="logo-text">Carte<b>Nexus</b></span></a>
+        <p>Boutique indépendante de cartes à collectionner et produits TCG.</p>
+      </div>
+      <div>
+        <h4>Boutique</h4>
+        <ul>
+          <li><a href="#produits">Nouveautés</a></li>
+          <li><a href="#produits">Précommandes</a></li>
+          <li><a href="#produits">Cartes à l'unité</a></li>
+          <li><a href="#produits">Accessoires</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#">Livraison &amp; retours</a></li>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>✉️ contact@carte-nexus.fr</li>
+          <li>🕒 Lun–Sam, 10h–19h</li>
+          <li class="socials"><a href="#">Instagram</a> · <a href="#">X</a> · <a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Carte Nexus – Tous droits réservés.</span>
+      <span class="pay">💳 CB · PayPal · Apple Pay</span>
+    </div>
+  </footer>
+
+  <!-- Panier -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Panier">
+    <div class="drawer-head">
+      <h3>Votre panier</h3>
+      <button class="icon-btn" id="closeCart" aria-label="Fermer">✕</button>
+    </div>
+    <div class="free-ship" id="freeShip"></div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="drawer-foot">
+      <div class="total"><span>Sous-total</span><b id="cartTotal">0,00 €</b></div>
+      <button class="btn btn-primary btn-block" id="checkout">Commander</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
