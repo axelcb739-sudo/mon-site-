@@ -111,8 +111,10 @@ button, input, select { font: inherit; }
 .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
 .product { background: #fff; border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
 .product:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.p-img { aspect-ratio: 1; display: grid; place-items: center; position: relative; background: linear-gradient(145deg, var(--c1), var(--c2)); }
-.p-box { width: 58%; aspect-ratio: .72; border-radius: 8px; background: rgba(255,255,255,.18); border: 3px solid rgba(255,255,255,.7); display: grid; place-items: center; color: #fff; font-weight: 800; font-size: .8rem; text-align: center; padding: 8px; text-transform: uppercase; letter-spacing: .5px; box-shadow: 0 10px 20px rgba(0,0,0,.2); transform: rotate(-4deg); }
+.p-img { aspect-ratio: 1; display: grid; place-items: center; position: relative; background: radial-gradient(circle at 50% 40%, #fff 0, #eef0f6 75%); overflow: hidden; }
+.p-img img { width: 100%; height: 100%; object-fit: cover; }
+.p-img .art { width: 88%; height: 88%; transition: transform .3s; }
+.product:hover .art { transform: scale(1.06) rotate(-2deg); }
 .p-tags { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
 .tag { font-size: .7rem; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #fff; color: var(--ink); }
 .tag-promo { background: var(--primary); color: #fff; }
@@ -175,7 +177,8 @@ cite { display: block; margin-top: 6px; font-size: .82rem; color: var(--muted); 
 .bar i { display: block; height: 100%; background: var(--primary); transition: width .3s; }
 .cart-items { flex: 1; overflow-y: auto; padding: 8px 20px; }
 .cart-items li { display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
-.ci-img { width: 56px; height: 56px; border-radius: 8px; background: linear-gradient(145deg, var(--c1), var(--c2)); }
+.ci-img { width: 56px; height: 56px; border-radius: 8px; background: var(--bg-alt); }
+.ci-img .art { width: 100%; height: 100%; }
 .ci-name { font-size: .88rem; font-weight: 600; line-height: 1.3; }
 .ci-price { font-size: .85rem; color: var(--primary); font-weight: 600; }
 .qty { display: flex; align-items: center; gap: 6px; }
