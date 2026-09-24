@@ -468,6 +468,7 @@ const LABELS = {
 };
 
 // tags : promo, pre (précommande), jp (import japonais)
+// img (optionnel) : lien ou chemin de la photo, ex. img: 'https://…/display.jpg'
 const PRODUCTS = [
   { id: 1, cat: 'pokemon', name: 'Display 36 boosters – Écarlate et Violet', type: 'Display', price: 179.9, old: 199.9, stock: 8, tags: ['promo'] },
   { id: 2, cat: 'pokemon', name: 'Coffret Dresseur d\'Élite (ETB)', type: 'ETB', price: 54.9, stock: 14, tags: [] },
@@ -625,7 +626,7 @@ function productArt(p) {
 }
 
 function productVisual(p) {
-  return `<img src="images/produit-${p.id}.jpg" alt="${p.name}" loading="lazy"
+  return `<img src="${p.img || `images/produit-${p.id}.jpg`}" alt="${p.name}" loading="lazy"
     onerror="this.replaceWith(document.getElementById('art-${p.id}').content.cloneNode(true))">
     <template id="art-${p.id}">${productArt(p)}</template>`;
 }
